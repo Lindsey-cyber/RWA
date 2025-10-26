@@ -1,4 +1,4 @@
-# 🌐 RWA Tranche — Risk-Adjusted Yield for On-Chain Real-World Assets
+# 💰 STRATAFI — Risk-Adjusted Yield for On-Chain Real-World Assets 💰
 
 > **RWA Tranche** brings structured yield tranching (Senior / Junior layers) to tokenized Real-World Assets (RWAs) on **Stellar**, enabling **risk-adjusted, transparent, and automated yield distribution** through Soroban smart contracts.
 
@@ -47,12 +47,12 @@ This mirrors traditional finance mechanics in a fully decentralized, programmabl
 | ![Screenshot 5](./p7.png) | ![Screenshot 6](./p8.png) |
 ---
 some of our key addresses(whale, admin, etc) and key contract explorer and key transactions:
-pool contract: https://stellar.expert/explorer/testnet/contract/CD24SABPPEFJHQ4D5UEVAV52SUYHDERKKBNWX2PUGVPSJ6NCOEJVBLTQ
-tranche contract: https://stellar.expert/explorer/testnet/contract/CDPE2IIAGN5XU5RVTMDOULM4SNQOD32N2M4MGFUWRXLZMVEEOI3KLIVQ?filter=users
-contract initialization sample: https://stellar.expert/explorer/testnet/tx/5386546119200768
+pool contract: https://stellar.expert/explorer/testnet/contract/CD24SABPPEFJHQ4D5UEVAV52SUYHDERKKBNWX2PUGVPSJ6NCOEJVBLTQ  
+tranche contract: https://stellar.expert/explorer/testnet/contract/CDPE2IIAGN5XU5RVTMDOULM4SNQOD32N2M4MGFUWRXLZMVEEOI3KLIVQ?filter=users  
+contract initialization sample: https://stellar.expert/explorer/testnet/tx/5386546119200768  
 whale address: https://stellar.expert/explorer/testnet/account/GCDO4H4IS2T5LDGKJBTJ7WNDJJRW6SDR2WNXZA3POIAYRJLKN6AXBUKA  
-our 16 testing run which guaranteed the whole process smoothness:
-see the bottom of the readme. they are very important! please read! there are 16 of them!
+our 16 testing run which guaranteed the whole process smoothness:  
+see the bottom of the readme. they are very important! please read! there are 16 of them!  
 ---
 
 ## 🧩 How It Works
