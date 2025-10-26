@@ -51,8 +51,8 @@ pool contract: https://stellar.expert/explorer/testnet/contract/CD24SABPPEFJHQ4D
 tranche contract: https://stellar.expert/explorer/testnet/contract/CDPE2IIAGN5XU5RVTMDOULM4SNQOD32N2M4MGFUWRXLZMVEEOI3KLIVQ?filter=users
 contract initialization sample: https://stellar.expert/explorer/testnet/tx/5386546119200768
 whale address: https://stellar.expert/explorer/testnet/account/GCDO4H4IS2T5LDGKJBTJ7WNDJJRW6SDR2WNXZA3POIAYRJLKN6AXBUKA  
-our 14 testing run which guaranteed the whole process smoothness:
-see the bottom of the readme. they are very important! please read!
+our 16 testing run which guaranteed the whole process smoothness:
+see the bottom of the readme. they are very important! please read! there are 16 of them!
 ---
 
 ## 🧩 How It Works
@@ -202,8 +202,8 @@ Built with ❤️ by **Lindsey & Tatyana**
 For **Stellar Hackathon 2025** — *“Brew bold ideas.”*
 
 ---
-14 test runs:
-deploy the contract code:
+16 test runs:
+1. deploy the contract code:
 lindseyma@Lindseys-MacBook-Pro-4443 RWA % soroban contract deploy \
   --wasm /Users/lindseyma/Documents/GitHub/RWA/contracts/tranche_contract/target/wasm32v1-none/release/tranche_co
 ntract.wasm \ 
@@ -211,7 +211,7 @@ ntract.wasm \
   --network testnet
 
 
-initialization code: soroban contract invoke \
+2. initialization code: soroban contract invoke \
   --id $CONTRACT_ID \                                                           
   --source-account $ADMIN_SECRET_KEY \
   --network testnet \                                                            
@@ -223,7 +223,7 @@ initialization code: soroban contract invoke \
   --min_junior 5000000
 hash: aa6164a935bfaca99f914bf02795e4d3d8f340d8ed7d323f8845953d5b2e7bf5
 
-approval code:
+3. senior approval code:
 soroban contract invoke \
   --id $USDC_ID \
   --source $SENIOR_SECRET_KEY \
@@ -235,8 +235,7 @@ soroban contract invoke \
   --expiration_ledger 1354766
 hash: 3396e5b88c015465faa9cbe2c58bc58612e99d32594c708a8dda18ea09ac6ba2
 
-Alexandra, [10/26/25 6:41 AM]
-buy code:
+4. senior buy code:
 soroban contract invoke \
   --id $CONTRACT_ID_2 \
   --source $SENIOR_SECRET_KEY \
@@ -249,8 +248,7 @@ hash: ℹ️  Signing transaction: c570e61015ba72798e27647c79176ff95383823355fa3
 📅 CBIELTK6YBZJU5UP2WWQEUCYKLPU6AUNZ2BQ4WWFEIE3USCIHMXQDAMA - Success - Event: [{"symbol":"transfer"},{"address":"GCKL6GUTPTAKBEHJV27Y6UZLNB3HDLNPB4N3NPU6VWSWLMRETUT3BDQD"},{"address":"CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP"},{"string":"USDC:GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5"}] = {"i128":"50000000"}
 📅 CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP - Success - Event: [{"symbol":"sub"}] = {"vec":[{"address":"GCKL6GUTPTAKBEHJV27Y6UZLNB3HDLNPB4N3NPU6VWSWLMRETUT3BDQD"},{"vec":[{"symbol":"Senior"}]},{"i128":"50000000"}]}
 
-Alexandra, [10/26/25 6:43 AM]
-junior approval code:
+5. junior approval code:
 soroban contract invoke \
   --id $USDC_ID \
   --source $JUNIOR_SECRET_KEY \
@@ -263,8 +261,7 @@ soroban contract invoke \
 hash: ℹ️  Signing transaction: 194f8cbfc7879ca8d1c75b7c5d13ae443a3dca635fa8a484ab6c9ac7645a5df8
 📅 CBIELTK6YBZJU5UP2WWQEUCYKLPU6AUNZ2BQ4WWFEIE3USCIHMXQDAMA - Success - Event: [{"symbol":"approve"},{"address":"GCD3FU576HQLD3NIY4AMH6XYHOHQUZIK2FXDTOZXP62ALNTW7RUMDOAM"},{"address":"CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP"},{"string":"USDC:GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5"}] = {"vec":[{"i128":"30000000"},{"u32":1354766}]}
 
-Alexandra, [10/26/25 6:46 AM]
-junior buy code:
+6. junior buy code:
 soroban contract invoke \
   --id $CONTRACT_ID_2 \
   --source $JUNIOR_SECRET_KEY \
@@ -278,8 +275,7 @@ soroban contract invoke \
 📅 CBIELTK6YBZJU5UP2WWQEUCYKLPU6AUNZ2BQ4WWFEIE3USCIHMXQDAMA - Success - Event: [{"symbol":"transfer"},{"address":"GCD3FU576HQLD3NIY4AMH6XYHOHQUZIK2FXDTOZXP62ALNTW7RUMDOAM"},{"address":"CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP"},{"string":"USDC:GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5"}] = {"i128":"30000000"}
 📅 CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP - Success - Event: [{"symbol":"sub"}] = {"vec":[{"address":"GCD3FU576HQLD3NIY4AMH6XYHOHQUZIK2FXDTOZXP62ALNTW7RUMDOAM"},{"vec":[{"symbol":"Junior"}]},{"i128":"30000000"}]}
 
-Alexandra, [10/26/25 6:48 AM]
-check status code:
+7. check status code:
 soroban contract invoke --id $CONTRACT_ID_2 --network testnet --source-account $ADMIN_SECRET_KEY -- get_user_share --user $SENIOR_PUBLIC_KEY --tranche '{"Senior": {}}'
 soroban contract invoke --id $CONTRACT_ID_2 --network testnet --source-account $ADMIN_SECRET_KEY -- get_user_share --user $JUNIOR_PUBLIC_KEY --tranche '{"Junior": {}}'
 soroban contract invoke --id $CONTRACT_ID_2 --network testnet --source-account $ADMIN_SECRET_KEY -- get_totals
@@ -291,8 +287,7 @@ soroban contract invoke --id $CONTRACT_ID_2 --network testnet --source-account $
 ℹ️  Simulation identified as read-only. Send by rerunning with --send=yes.
 ["50000000","30000000"]
 
-Alexandra, [10/26/25 6:50 AM]
-admin approve revenue:
+8. admin approve revenue:
 soroban contract invoke \
   --id $USDC_ID \
   --source $ADMIN_SECRET_KEY \
@@ -305,8 +300,7 @@ soroban contract invoke \
 ℹ️  Signing transaction: d287e5d71bb920c8a5904348ff1e8369568654f4478fe9d1c38ffe7d0497006c
 📅 CBIELTK6YBZJU5UP2WWQEUCYKLPU6AUNZ2BQ4WWFEIE3USCIHMXQDAMA - Success - Event: [{"symbol":"approve"},{"address":"GAZ57ZNVBFTYPAR7EVW7LISVT5ZYU2FFHB7Q5YC74KDUXNILIVM7555Q"},{"address":"CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP"},{"string":"USDC:GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5"}] = {"vec":[{"i128":"60000000"},{"u32":1354766}]}
 
-Alexandra, [10/26/25 6:51 AM]
-admin notice revenue:
+9. admin notice revenue:
 soroban contract invoke \
   --id $CONTRACT_ID_2 \
   --source $ADMIN_SECRET_KEY \
@@ -322,8 +316,7 @@ soroban contract invoke \
 📅 CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP - Success - Event: [{"symbol":"pay"}] = {"vec":[{"address":"GCD3FU576HQLD3NIY4AMH6XYHOHQUZIK2FXDTOZXP62ALNTW7RUMDOAM"},{"vec":[{"symbol":"Junior"}]},{"i128":"22500000"}]}
 📅 CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP - Success - Event: [{"symbol":"psum"}] = {"vec":[{"address":"GAZ57ZNVBFTYPAR7EVW7LISVT5ZYU2FFHB7Q5YC74KDUXNILIVM7555Q"},{"i128":"60000000"},{"i128":"37500000"},{"i128":"22500000"}]}
 
-Alexandra, [10/26/25 6:53 AM]
-admin handle loss:
+10. admin handle loss:
 LOSS_AMOUNT=20000000
 soroban contract invoke \
   --id $CONTRACT_ID_2 \
@@ -335,8 +328,7 @@ soroban contract invoke \
 ℹ️  Signing transaction: 7d7df87bb49201fcbd1b442f9373805c8bb3bd151465347619292ac6c689e452
 📅 CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP - Success - Event: [{"symbol":"loss"}] = {"vec":[{"address":"GAZ57ZNVBFTYPAR7EVW7LISVT5ZYU2FFHB7Q5YC74KDUXNILIVM7555Q"},{"i128":"20000000"}]}
 
-Alexandra, [10/26/25 6:55 AM]
-account balance after loss:
+11. account balance after loss:
 soroban contract invoke --id $CONTRACT_ID_2 --network testnet --source-account $ADMIN_SECRET_KEY -- get_user_share --user $SENIOR_PUBLIC_KEY --tranche '{"Senior": {}}'
 soroban contract invoke --id $CONTRACT_ID_2 --network testnet --source-account $ADMIN_SECRET_KEY -- get_user_share --user $JUNIOR_PUBLIC_KEY --tranche '{"Junior": {}}'
 soroban contract invoke --id $CONTRACT_ID_2 --network testnet --source-account $ADMIN_SECRET_KEY -- get_totals
@@ -348,8 +340,7 @@ soroban contract invoke --id $CONTRACT_ID_2 --network testnet --source-account $
 ℹ️  Simulation identified as read-only. Send by rerunning with --send=yes.
 ["50000000","10000000"]
 
-Alexandra, [10/26/25 6:56 AM]
-senior redeem:
+12. senior redeem:
 lindseyma@Lindseys-MacBook-Pro-4443 RWA % soroban contract invoke \
   --id $CONTRACT_ID_2 \
   --source $SENIOR_SECRET_KEY \
@@ -369,8 +360,7 @@ Event log (newest first):
 📅 CBIELTK6YBZJU5UP2WWQEUCYKLPU6AUNZ2BQ4WWFEIE3USCIHMXQDAMA - Success - Event: [{"symbol":"transfer"},{"address":"CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP"},{"address":"GCKL6GUTPTAKBEHJV27Y6UZLNB3HDLNPB4N3NPU6VWSWLMRETUT3BDQD"},{"string":"USDC:GBBD47IF6LWK7P7MDEVSCWR7DPUWV3NY3DTQEVFL4NAT4AQH3ZLLFLA5"}] = {"i128":"10000000"}
 📅 CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP - Success - Event: [{"symbol":"redeem"}] = {"vec":[{"address":"GCKL6GUTPTAKBEHJV27Y6UZLNB3HDLNPB4N3NPU6VWSWLMRETUT3BDQD"},{"vec":[{"symbol":"Senior"}]},{"i128":"10000000"}]}
 
-Alexandra, [10/26/25 6:57 AM]
-senior redeem balance less than redeem amount:
+13. senior redeem balance less than redeem amount:
 soroban contract invoke \
   --id $CONTRACT_ID_2 \
   --source $SENIOR_SECRET_KEY \
@@ -386,8 +376,7 @@ Event log (newest first):
    0: [Diagnostic Event] contract:CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP, topics:[error, Error(WasmVm, InvalidAction)], data:["VM call trapped: UnreachableCodeReached", redeem]
    1: [Diagnostic Event] topics:[fn_call, CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP, redeem], data:[GCKL6GUTPTAKBEHJV27Y6UZLNB3HDLNPB4N3NPU6VWSWLMRETUT3BDQD, [Senior], 100000000]
 
-Alexandra, [10/26/25 6:57 AM]
-admin pause:
+14. admin pause:
 soroban contract invoke \
   --id $CONTRACT_ID_2 \
   --source $ADMIN_SECRET_KEY \
@@ -398,8 +387,7 @@ soroban contract invoke \
 ℹ️  Signing transaction: e0477d5262021a4ec9e02ce15d6f4f89279bb523abd8bd7a1e94fd2c0319e1da
 📅 CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP - Success - Event: [{"symbol":"pause"}] = {"vec":[{"bool":true}]}
 
-Alexandra, [10/26/25 6:58 AM]
-admin recover:
+15. admin recover:
 soroban contract invoke \
   --id $CONTRACT_ID_2 \
   --source $ADMIN_SECRET_KEY \
@@ -411,8 +399,7 @@ soroban contract invoke \
 ℹ️  Signing transaction: 0e6015ed00d0eaf8f7e77c4f5853ae9c53ef06ec66bd532d1e856b05d936e2ee
 📅 CAIUMAVGQUDLA5EMTCC4GY5EF64VMZOFPSS6EFZZKLFWMAB56ZPE5QRP - Success - Event: [{"symbol":"pause"}] = {"vec":[{"bool":false}]}
 
-Alexandra, [10/26/25 6:59 AM]
-update barrier investment amount:
+16. update barrier investment amount:
 soroban contract invoke \
   --id $CONTRACT_ID_2 \
   --source $ADMIN_SECRET_KEY \
