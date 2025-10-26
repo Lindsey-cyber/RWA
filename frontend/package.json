@@ -1,0 +1,20 @@
+{
+    "name": "tranche-frontend",
+    "version": "1.0.0",
+    "type": "module",
+    "dependencies": {
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "soroban-client": "^0.11.2",
+        "tailwindcss": "^3.4.18",
+        "vite": "^6.4.1"
+    },
+    "scripts": {
+        "dev": "vite"
+    },
+    "main": "index.js",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "description": ""
+}
