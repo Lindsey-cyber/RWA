@@ -41,10 +41,10 @@ A **tranche** (“slice”) segments a pool of assets into layers with **differe
 This mirrors traditional finance mechanics in a fully decentralized, programmable environment.
 
 ---
-| ![Screenshot 1](./Screenshot 2025-10-26 at 1.07.17 AM.png) | ![Screenshot 2](./Screenshot 2025-10-26 at 1.12.35 AM.png) |
+| ![Screenshot 1](./p1.png) | ![Screenshot 2](./p2.png) |
 |---|---|
-| ![Screenshot 3](./Screenshot 2025-10-26 at 2.34.13 AM.png) | ![Screenshot 4](./Screenshot 2025-10-26 at 5.16.12 AM.png) |
-| ![Screenshot 5](./Screenshot 2025-10-26 at 6.09.01 AM.png) | ![Screenshot 6](./Screenshot 2025-10-26 at 8.55.12 AM.png) |
+| ![Screenshot 3](./p5.png) | ![Screenshot 4](./p4.png) |
+| ![Screenshot 5](./p7.png) | ![Screenshot 6](./p6.png) |
 ---
 
 ## 🧩 How It Works
