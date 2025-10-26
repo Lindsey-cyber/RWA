@@ -2,6 +2,8 @@
 
 > **RWA Tranche** brings structured yield tranching (Senior / Junior layers) to tokenized Real-World Assets (RWAs) on **Stellar**, enabling **risk-adjusted, transparent, and automated yield distribution** through Soroban smart contracts.
 
+video link: https://drive.google.com/drive/folders/1CsJ5002g4GsyauiBjsTzUvHHfgNFm8Vd?usp=drive_link
+
 ---
 ## 🚀 Overview
 
