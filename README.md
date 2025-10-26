@@ -46,6 +46,14 @@ This mirrors traditional finance mechanics in a fully decentralized, programmabl
 | ![Screenshot 3](./p5.png) | ![Screenshot 4](./p4.png) |
 | ![Screenshot 5](./p7.png) | ![Screenshot 6](./p8.png) |
 ---
+some of our key addresses(whale, admin, etc) and key contract explorer and key transactions:
+https://stellar.expert/explorer/testnet/account/GAJBWRUXP64Z7BBYK2BUQ4G2PFEQI2UIFTPM77SOWW4H63F5NRI2BD2U
+https://stellar.expert/explorer/testnet/contract/CD24SABPPEFJHQ4D5UEVAV52SUYHDERKKBNWX2PUGVPSJ6NCOEJVBLTQ
+https://stellar.expert/explorer/testnet/contract/CDPE2IIAGN5XU5RVTMDOULM4SNQOD32N2M4MGFUWRXLZMVEEOI3KLIVQ?filter=users
+https://stellar.expert/explorer/testnet/tx/5386546119200768
+https://stellar.expert/explorer/testnet/contract/CCS7BCLNEQNSRHTOKGVKQQUFFUV3XJPORTVHSEOOYRJNMEAWTNAHDFZB
+https://stellar.expert/explorer/testnet/account/GCDO4H4IS2T5LDGKJBTJ7WNDJJRW6SDR2WNXZA3POIAYRJLKN6AXBUKA
+---
 
 ## 🧩 How It Works
 
