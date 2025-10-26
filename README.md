@@ -3,7 +3,6 @@
 > **RWA Tranche** brings structured yield tranching (Senior / Junior layers) to tokenized Real-World Assets (RWAs) on **Stellar**, enabling **risk-adjusted, transparent, and automated yield distribution** through Soroban smart contracts.
 
 ---
-
 ## 🚀 Overview
 
 Real-World Assets (RWAs) such as tokenized Treasury bills are rapidly growing on Stellar — yet most of them are **static holdings** that lack yield differentiation or risk management mechanisms.
@@ -13,6 +12,55 @@ In traditional finance, **tranching** redistributes yield and risk:
 - **Junior tranches** take higher risk for higher potential yield.
 
 **RWA Tranche** brings this mechanism on-chain using Soroban smart contracts, creating a composable and transparent DeFi primitive for structured yield products.
+
+---## 🔍 Background Concepts
+
+### 🏦 Real-World Assets (RWAs) on Stellar
+**RWAs** are off-chain financial or physical assets — e.g., Treasury bills, corporate bonds, or cash-flow streams — **represented on-chain as tokenized claims**.  
+
+Stellar advantages for RWAs:
+- Native asset issuance and trustline model  
+- Fast, low-cost transfers  
+- Programmable contracts with Soroban  
+
+In this project, **RWA tokens** act as the yield-generating base for tranches. Periodic interest or revenue flows from the RWA pool into the tranche contracts.
+
+### 🧮 Tranches in Traditional Finance
+A **tranche** (“slice”) segments a pool of assets into layers with **different risk-return and repayment priorities**:  
+- **Senior** → priority yield, protected from losses; lower risk/reward  
+- **Junior** → absorbs losses first; higher risk/reward  
+- (Optional) **Mezzanine** → intermediate risk/reward  
+
+**On-chain adaptation:**  
+- Senior/Junior tokens minted by the Soroban contract  
+- Yield allocation prioritizes Senior tranche  
+- Losses first absorbed by Junior tranche  
+
+This mirrors traditional finance mechanics in a fully decentralized, programmable environment.
+
+---
+
+## 🧩 How It Works
+
+1. **RWA Tokenization:**  
+   - Issue tokenized RWAs (e.g., RWA_UST) on Stellar Testnet via Soroban token contract.  
+   - Mint tokens to issuer/custodian accounts.
+
+2. **Blend Pool Integration:**  
+   - Deposit RWA tokens into a **Blend pool** to simulate yield generation.  
+   - Pool emits payouts triggered manually (demo) or via oracle (production).
+
+3. **Tranche Contract Deployment (Soroban):**  
+   - Mint **Senior** and **Junior tranche tokens**.  
+   - Users subscribe with XLM/USDC.  
+   - On pool payout:  
+     - Senior tranche receives yield first  
+     - Junior receives remaining  
+   - On losses: Junior absorbs first, Senior protected.
+
+4. **User Interaction:**  
+   - Subscribe, redeem, or switch tranches via smart contract calls.  
+   - Admin can pause/resume, update minimums, or trigger payouts.
 
 ---
 
