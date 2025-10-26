@@ -43,8 +43,8 @@ This mirrors traditional finance mechanics in a fully decentralized, programmabl
 ---
 | ![Screenshot 1](./p1.png) | ![Screenshot 2](./p2.png) |
 |---|---|
-| ![Screenshot 3](./p3.png) | ![Screenshot 4](./p4.png) |
-| ![Screenshot 5](./p5.png) | ![Screenshot 6](./p6.png) |
+| ![Screenshot 3](./p5.png) | ![Screenshot 4](./p4.png) |
+| ![Screenshot 5](./3.png) | ![Screenshot 6](./p6.png) |
 ---
 
 ## 🧩 How It Works
